@@ -1,0 +1,8 @@
+client/dist
+client/node_modules
+
+server/node_modules
+
+vuecli/dist
+vuecli/node_modules
+
