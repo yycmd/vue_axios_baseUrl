@@ -1,9 +1,8 @@
 # 项目介绍
 
-实现vuejs项目编译后，axios 的 baseURL 可以在配置文件中，配置服务端的接口地址
+实现vuejs项目编译后，axios 的 baseURL 可以在配置文件中，随时修改服务端的接口地址
 
 > 项目基于 nodejs 实现
-
 
 # 子项目描述
 
