@@ -1,23 +1,30 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" @click="getName">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <div>
+      <img alt="Vue logo" src="./assets/logo.png">
+    </div>
+    <div>
+      <button type="button" @click="getName">点击发送 getName 请求</button>
+    </div>
+
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
   </div>
 </template>
 
 <script>
 import request from './request';
-import HelloWorld from './components/HelloWorld.vue';
+// import HelloWorld from './components/HelloWorld.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    // HelloWorld
   },
   methods: {
     getName() {
       request.get('/getName').then(res => {
         console.log(res.data);
+        alert(res.data.user);
       })
     }
   }

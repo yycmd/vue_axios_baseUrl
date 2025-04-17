@@ -3,9 +3,9 @@ import axios from "axios";
 let request;
 
 if (!request) {
-    await fetch('/config.json').then(res => res.json()).then((jsonRes) => {
+    await fetch('/config.json').then(res => res.json()).then(({ url }) => {
         request = axios.create({
-            baseURL: jsonRes.url,
+            baseURL: url,
             timeout: 1000,
         });
     });
